@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patient Monitor</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="brand">
+        <div class="logo">+</div>
+        <div>
+          <h1>RV Hospital Patient Monitoring Dashboard</h1>
+          <div class="sub">AI-Assisted Patient Triage Monitor | ESP32 Live System</div>
+        </div>
+      </div>
+      <div class="live">LIVE MONITORING</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="notice">Prototype only — Bed 1 reads ESP32 sensors; Beds 2 and 3 use simulated data. Not for clinical use.</div>
+    <div id="banner" class="banner"></div>
+    <div class="stats">
+      <div class="stat"><div class="label">Critical Patients</div><b id="crit">0</b></div>
+      <div class="stat"><div class="label">Warning Alerts</div><b id="warn">0</b></div>
+      <div class="stat"><div class="label">Stable Patients</div><b id="norm">0</b></div>
+    </div>
+    <div class="grid" id="cards"></div>
+    <section class="chartBox">
+      <div class="chartHead">
+        <h3>Bed 1 Live Trend</h3>
+        <div class="legend">
+          <span><i class="dot" style="background:#2563eb"></i>HR</span>
+          <span><i class="dot" style="background:#059669"></i>SpO2</span>
+          <span><i class="dot" style="background:#d97706"></i>Temp</span>
+        </div>
+      </div>
+      <canvas id="graph" width="1000" height="280"></canvas>
+    </section>
+    <footer id="foot">Loading...</footer>
+  </main>
+</body>
+</html>
