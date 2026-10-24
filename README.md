@@ -91,9 +91,6 @@ flowchart LR
   E --> H[Green API → WhatsApp]
   I[Emergency Button] --> E
 ```
-
-See [wiring](docs/wiring.md) and [limitations](docs/behavior-and-limitations.md) for details. Do not present the mock beds as live patients, or the calculated score as a validated clinical risk estimate.
-
 ## Before pushing to GitHub
 
 In the project root:
